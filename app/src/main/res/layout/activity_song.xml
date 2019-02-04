@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SongActivity"
+    android:orientation="vertical"
+    >
+
+                <LinearLayout
+                    android:gravity="top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/Cuplet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/Pripev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/Last"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            >
+
+                <Button
+                    android:id="@+id/playBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:background="@drawable/play"
+                    android:onClick="playBtnOnClick"
+                    android:gravity="bottom"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/positionBar"
+                    android:layout_toRightOf="@+id/playBtn"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    >
+
+                        <SeekBar
+                            android:id="@+id/positionBar"
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/playBtn"
+                            android:max="100"
+                            android:progress="0" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="7dp"
+                            android:paddingBottom="7dp"
+                            >
+
+                                <TextView
+                                    android:id="@+id/elapsedTimeLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="40dp"
+                                    android:text="0:11" />
+
+                                <TextView
+                                    android:id="@+id/remainingTimeLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="185dp"
+                                    android:text="0:11" />
+                        </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/iuo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_launcher_background" />
+
+        </LinearLayout>
+
+</RelativeLayout>
